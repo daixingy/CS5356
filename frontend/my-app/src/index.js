@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import SignInScreen from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<App subject="Clarice"/>, document.getElementById('root'));
+
+ReactDOM.render(<SignInScreen subject="Clarice"/>, document.getElementById('root'));
 
 

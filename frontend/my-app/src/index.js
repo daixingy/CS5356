@@ -9,3 +9,4 @@ import SignInScreen from './App';
 ReactDOM.render(<SignInScreen subject="Clarice"/>, document.getElementById('root'));
 
 
+reportWebVitals()

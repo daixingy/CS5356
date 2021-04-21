@@ -13,7 +13,7 @@ import "firebase/auth";
 import "firebase/firestore"
 
 // or using ES6 imports:
-import * as firebaseui from 'firebaseui'
+// import * as firebaseui from 'firebaseui'
 import 'firebaseui/dist/firebaseui.css'
 
 // Import FirebaseAuth and firebase.
@@ -23,7 +23,7 @@ import firebase from 'firebase';
  
 // Configure Firebase.
 
-var config = {
+const config = {
   apiKey: "AIzaSyBf__Eh5USYsX8AS5xIAJ0L8EDRVLylgmo",
   authDomain: "meme-8f992.firebaseapp.com",
   projectId: "meme-8f992",
@@ -33,7 +33,7 @@ var config = {
 };
 firebase.initializeApp(config);
  
-class SignInScreen extends React.Component {
+class App extends React.Component {
  
   // The component's Local state.
   state = {
@@ -152,4 +152,4 @@ class SignInScreen extends React.Component {
 //   );
 // }
 
-export default SignInScreen;
+export default App;

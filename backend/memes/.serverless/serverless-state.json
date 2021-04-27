@@ -221,7 +221,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/memes/dev/1616819539310-2021-03-27T04:32:19.310Z/memes.zip"
+                "S3Key": "serverless/memes/dev/1619493994447-2021-04-27T03:26:34.447Z/memes.zip"
               },
               "Handler": "s_hello.handler",
               "Runtime": "nodejs12.x",
@@ -239,14 +239,14 @@
               "HelloLogGroup"
             ]
           },
-          "HelloLambdaVersion87gcjXjTVUuSvhGzEIkzgu4Q91YraggrSlWeHJpzg": {
+          "HelloLambdaVersion2J0bJscFA51LZxWgg1YJ9snQGedXXTawlkK22BrE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "bWpkhid6AJ61FOI0y9gJOOE+B0shUFH1NVOBLoG2Tsc="
+              "CodeSha256": "haz2zkPnECbkY58Tdg8DUUbqk/RhE7256mhzW6BZYI4="
             }
           },
           "ApiGatewayRestApi": {
@@ -365,7 +365,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1616819521539": {
+          "ApiGatewayDeployment1619493977462": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -524,7 +524,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/memes/dev/1616819539310-2021-03-27T04:32:19.310Z/custom-resources.zip"
+                "S3Key": "serverless/memes/dev/1619493994447-2021-04-27T03:26:34.447Z/custom-resources.zip"
               },
               "FunctionName": "memes-dev-custom-resource-apigw-cw-role",
               "Handler": "apiGatewayCloudWatchRole/handler.handler",
@@ -580,7 +580,7 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersion87gcjXjTVUuSvhGzEIkzgu4Q91YraggrSlWeHJpzg"
+              "Ref": "HelloLambdaVersion2J0bJscFA51LZxWgg1YJ9snQGedXXTawlkK22BrE"
             }
           },
           "ServiceEndpoint": {
@@ -726,7 +726,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "HelloLambdaVersion87gcjXjTVUuSvhGzEIkzgu4Q91YraggrSlWeHJpzg"
+        "versionLogicalId": "HelloLambdaVersion2J0bJscFA51LZxWgg1YJ9snQGedXXTawlkK22BrE"
       }
     },
     "configValidationMode": "warn",
@@ -758,7 +758,7 @@
     "artifact": "/Users/xingyuedai/Documents/courses/2021 spring/Building startup systems/website/CS5356/backend/memes/.serverless/memes.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/memes/dev/1616819539310-2021-03-27T04:32:19.310Z",
+    "artifactDirectoryName": "serverless/memes/dev/1619493994447-2021-04-27T03:26:34.447Z",
     "artifact": "memes.zip"
   }
 }

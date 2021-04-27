@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "firebase-token-verifier": "^0.1.0"
+  }
+}

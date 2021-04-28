@@ -44,6 +44,7 @@ class SignInScreen extends React.Component {
     })
 
     if(response.status === 401) {
+      document.write("error")
       return console.log('unauthorized')
     }
     const orders = await response.json()

@@ -207,7 +207,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/memes/dev/1619493994447-2021-04-27T03:26:34.447Z/memes.zip"
+          "S3Key": "serverless/memes/dev/1619577338209-2021-04-28T02:35:38.209Z/memes.zip"
         },
         "Handler": "s_hello.handler",
         "Runtime": "nodejs12.x",
@@ -225,14 +225,14 @@
         "HelloLogGroup"
       ]
     },
-    "HelloLambdaVersion2J0bJscFA51LZxWgg1YJ9snQGedXXTawlkK22BrE": {
+    "HelloLambdaVersionyzOWWvPiWpG0ylh5whrxF1eulnede6Ajc8jOGnckA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "haz2zkPnECbkY58Tdg8DUUbqk/RhE7256mhzW6BZYI4="
+        "CodeSha256": "pO8GycdJ+G3cHUNLci7p7u+HsQKetnjDknneEkt9khs="
       }
     },
     "ApiGatewayRestApi": {
@@ -351,7 +351,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1619493977462": {
+    "ApiGatewayDeployment1619577320019": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -510,7 +510,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/memes/dev/1619493994447-2021-04-27T03:26:34.447Z/custom-resources.zip"
+          "S3Key": "serverless/memes/dev/1619577338209-2021-04-28T02:35:38.209Z/custom-resources.zip"
         },
         "FunctionName": "memes-dev-custom-resource-apigw-cw-role",
         "Handler": "apiGatewayCloudWatchRole/handler.handler",
@@ -566,7 +566,7 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersion2J0bJscFA51LZxWgg1YJ9snQGedXXTawlkK22BrE"
+        "Ref": "HelloLambdaVersionyzOWWvPiWpG0ylh5whrxF1eulnede6Ajc8jOGnckA"
       }
     },
     "ServiceEndpoint": {

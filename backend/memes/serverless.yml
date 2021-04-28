@@ -61,15 +61,16 @@ provider:
 functions:
   hello:
     handler: handler.hello
-    # Add the following lines:
     events:
       - http:
           path: /
           method: ANY
+          cors: true
       - http:
           path: /{proxy+}
           method: ANY
-  
+          cors: true
+
 plugins:
   - serverless-offline
   

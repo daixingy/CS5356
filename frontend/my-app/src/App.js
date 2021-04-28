@@ -70,7 +70,7 @@ class SignInScreen extends React.Component {
       backendUrl = 'http://localhost:4000/dev'
     }
     const idToken = await firebase.auth().currentUser?.getIdToken()
-    // document.write(idToken)
+    document.write(idToken)
     const response = await fetch(backendUrl + "/orders", {
       headers: {
         'Authorization': idToken

@@ -64,7 +64,7 @@ class SignInScreen extends React.Component {
 
 
   async componentDidMount(){
-    let backendUrl = "https://1z2wu4jojc.execute-api.us-east-1.amazonaws.com/dev"
+    let backendUrl = "https://mng3jind5f.execute-api.us-east-1.amazonaws.com/dev/"
     if (window.location.href.includes("localhost")) {
       // document.write("idToken")
       backendUrl = 'http://localhost:4000/dev'

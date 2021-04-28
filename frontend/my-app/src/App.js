@@ -29,40 +29,6 @@ class SignInScreen extends React.Component {
       orders: null
     };
   }
-
-  // The component's Local state.
-
-
-  // Configure FirebaseUI.
-
-  // Listen to the Firebase Auth state and set the local state.
-
-  // async componentDidMount() {
-
-  //   const token = await firebase.auth().currentUser.getIdToken()
-  //   try {
-  //     // const Response = await fetch('https://ws00a11wig.execute-api.us-east-1.amazonaws.com/dev/whoami', { headers: { 'Authorization': token } })
-  //     const Response = await fetch('https://1z2wu4jojc.execute-api.us-east-1.amazonaws.com/dev/whoami', { headers: { 'Authorization': token } })
-  //     if (Response.status === 401) {
-  //       console.log("unauthorized")
-  //     } else {
-  //       const data = await Response.json()
-  //       this.setState({ data })
-  //     }
-  //   } catch(err) {console.error(err)
-  //   }
-
-
-  // async componentDidMount() {
-  //   // const response = await fetch('https://1z2wu4jojc.execute-api.us-east-1.amazonaws.com/dev/whoami')
-  //   const response = await fetch('http://localhost:4000/dev/orders')
-  //   const orders = await response.json()
-  //   // save it to your components state so you can use it during render
-  //   this.setState({ orders: orders })
-  //   console.log(orders)
-  // }
-
-
   async componentDidMount(){
     let backendUrl = "https://mng3jind5f.execute-api.us-east-1.amazonaws.com/dev/"
     if (window.location.href.includes("localhost")) {
@@ -70,7 +36,7 @@ class SignInScreen extends React.Component {
       backendUrl = 'http://localhost:4000/dev'
     }
     const idToken = await firebase.auth().currentUser?.getIdToken()
-    document.write(idToken)
+    // document.write(idToken)
     const response = await fetch(backendUrl + "/orders", {
       headers: {
         'Authorization': idToken
@@ -81,42 +47,16 @@ class SignInScreen extends React.Component {
       return console.log('unauthorized')
     }
     const orders = await response.json()
+    document.write(orders)
     // save it to your components state so you can use it during render
     this.setState({ orders: orders })
     console.log(orders)
   }
-
-    // firebase.auth().onAuthStateChanged((user) => {
-    //   if (user) {
-    //     this.setState({user});
-    //   } else {
-    //     this.setState({user:null});
-    //   }
-    // });
-    // this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(
-    //   (user) => this.setState({ isSignedIn: !!user })
-    // );
-    // }
-
-
     signOut() {
       firebase.auth().signOut()
     }
-  // Make sure we un-register Firebase observers when the component unmounts.
-  // componentWillUnmount() {
-  //   this.unregisterAuthObserver();
-  // }
 
   render() {
-    // if (!this.state.orders) {
-    //   return (
-    //     <div>
-    //       <h1>My App</h1>
-    //       <p>Please sign-in:</p>
-    //       <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
-    //     </div>
-    //   );
-    // }
     const userName = firebase.auth().currentUser?.email;
     return (
       <section className="section">
@@ -140,43 +80,9 @@ class SignInScreen extends React.Component {
         </div>
       </section>
     );
-
-    // return (
-    //   <div>
-    //     <div className="title">My Orders</div>
-        // <ul>
-        //   {
-        //     this.state.orders && this.state.orders.map(order => {
-        //       return (
-        //         <li>
-        //           <div>Order ID: {order.id}</div>
-        //           <div>Order status: {order.status}</div>
-        //         </li>
-        //       )
-        //     })
-        //   }
-        // </ul>
-
-    //     <div>
-    //       <p> Welcome {firebase.auth().currentUser.displayName}! You are now signed-in!</p>
-    //       <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
-    //     </div>
-    //   </div >
-  
-    // )
     
   }
-    // return (
-    //   <div>
-    //     <h1>My App</h1>
-    //     <p> Welcome {firebase.auth().currentUser.displayName}! You are now signed-in!</p>
-    //     <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
-    //   </div>
-    // );
 }
-
-
-
 
 class App extends React.Component {
   constructor(props) {

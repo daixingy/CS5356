@@ -48,7 +48,7 @@ class SignInScreen extends React.Component {
       return console.log('unauthorized')
     }
     const orders = await response.json()
-    document.write(orders)
+    // document.write(orders)
     // save it to your components state so you can use it during render
     this.setState({ orders: orders })
     console.log(orders)
